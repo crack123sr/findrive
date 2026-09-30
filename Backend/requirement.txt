@@ -1,0 +1,2 @@
+google/genai axios@latest bcrypt@latest cloudinary@latest cookie-parser@latest cors@latest date-fns@latest dotenv@latest express@latest helmet@latest jsonwebtoken@latest mongoose@latest 
+ multer@latest multer-storage-cloudinary@latest node-cron@latest passport@latest passport-jwt@latest resend@latest uuid@latest zod@latest

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Making a financial Saas platform",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon validators/index.js"
+  },
+  "author": "Priyanshu Bhardwaj",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^2.16.0",
+    "axios": "^1.19.0",
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^1.41.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "date-fns": "^4.4.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.1",
+    "multer": "^2.2.0",
+    "multer-storage-cloudinary": "^4.0.0",
+    "node-cron": "^4.6.0",
+    "nodemon": "^3.1.14",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "resend": "^6.18.1",
+    "stripe": "^22.5.0",
+    "uuid": "^14.0.1",
+    "zod": "^4.4.3"
+  }
+}
