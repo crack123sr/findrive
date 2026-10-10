@@ -6,7 +6,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon validators/index.js"
+    "start-dev": "nodemon validators/index.js", 
+    "start": "node validators/index.js"
   },
   "author": "Priyanshu Bhardwaj",
   "license": "ISC",
