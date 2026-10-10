@@ -89,7 +89,7 @@ const ScheduleReportForm = ({
     }
 
     const frequency = form.watch("frequency") || "MONTHLY";
-    const labels = {
+    const labels: Record<string, string> = {
       MINUTELY: "every minute",
       DAILY: "every day",
       WEEKLY: "every week",

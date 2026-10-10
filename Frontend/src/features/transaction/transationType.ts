@@ -2,7 +2,7 @@ import {
   _TRANSACTION_FREQUENCY,
   _TransactionType,
   PAYMENT_METHODS_ENUM,
-} from "../constant/index.ts";
+} from "../../constant/index.ts";
 
 type RecurringIntervalType =
   (typeof _TRANSACTION_FREQUENCY)[keyof typeof _TRANSACTION_FREQUENCY];
@@ -45,6 +45,7 @@ export interface TransactionType {
   lastProcessed: string | null;
   status: string;
   paymentMethod: string;
+  receiptUrl?: string;
   createdAt: string;
   updatedAt: string;
   id?: string;
