@@ -18,6 +18,7 @@ export const formatCurrency = (value: number,
   return new Intl.NumberFormat('en-IN', {
     style: 'currency',
     currency,
+    currencyDisplay: 'narrowSymbol',
     minimumFractionDigits: decimalPlaces,
     maximumFractionDigits: decimalPlaces,
     notation: compact ? 'compact' : 'standard',
