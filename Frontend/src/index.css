@@ -134,6 +134,107 @@ body {
   }
 }
 
+.auth-form-panel {
+  background:
+    radial-gradient(ellipse at 15% 0%, rgb(16 185 129 / 5%), transparent 34%),
+    var(--background);
+}
+
+.auth-hero {
+  background:
+    radial-gradient(ellipse at 52% 42%, rgb(16 90 66 / 20%), transparent 47%),
+    linear-gradient(145deg, #0c1513 0%, #0b1211 48%, #101713 100%);
+}
+
+.auth-hero-grid {
+  background-image:
+    linear-gradient(rgb(226 255 244 / 2.5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(226 255 244 / 2.5%) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.auth-glow {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(1px);
+}
+
+.auth-glow-one {
+  top: 10%;
+  right: -8rem;
+  width: 24rem;
+  height: 24rem;
+  background: radial-gradient(circle, rgb(16 185 129 / 12%), transparent 68%);
+}
+
+.auth-glow-two {
+  bottom: -12rem;
+  left: 5%;
+  width: 32rem;
+  height: 32rem;
+  background: radial-gradient(circle, rgb(180 137 70 / 8%), transparent 68%);
+}
+
+.auth-heading-accent {
+  color: #6ee7b7;
+  text-shadow: 0 0 36px rgb(52 211 153 / 18%);
+}
+
+.auth-dashboard {
+  isolation: isolate;
+}
+
+.auth-glass-card,
+.auth-breakdown-card {
+  border: 1px solid rgb(226 255 244 / 9%);
+  background: linear-gradient(145deg, rgb(255 255 255 / 6%), rgb(255 255 255 / 2%));
+  box-shadow:
+    0 20px 60px rgb(0 0 0 / 17%),
+    inset 0 1px 0 rgb(255 255 255 / 4%);
+  backdrop-filter: blur(18px);
+}
+
+.auth-breakdown-card {
+  border-color: rgb(251 191 36 / 13%);
+  background: linear-gradient(145deg, rgb(32 38 31 / 94%), rgb(18 24 21 / 94%));
+}
+
+.auth-float-slow {
+  animation: auth-float 7s ease-in-out infinite;
+}
+
+.auth-float-fast {
+  animation: auth-float 6s ease-in-out -2s infinite;
+}
+
+@keyframes auth-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 639px) {
+  .auth-hero {
+    min-height: 570px;
+  }
+
+  .auth-dashboard-top > span {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-float-slow,
+  .auth-float-fast {
+    animation: none;
+  }
+}
 
 /* --chart-1: oklch(0.37 0.14 146.5);
 --chart-2: oklch(0.65 0.16 147.2);
