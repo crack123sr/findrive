@@ -113,7 +113,7 @@ export const getReportEmailTemplate = (
         const text = String(insight)
           .replace(/\$/g, "₹")
           .replace(/\bUSD\b/gi, "INR")
-          .replace(/\bdollars?\b/gi, "rupees");
+          .replace(/\bdollars?\b/gi, "₹");
 
         return `
           <li style="

@@ -70,7 +70,7 @@ export const sendReportEmail = async (params) => {
                 )
                 .replace(
                   /\bdollars?\b/gi,
-                  "rupees"
+                  "₹"
                 )}`
           )
           .join("\n")

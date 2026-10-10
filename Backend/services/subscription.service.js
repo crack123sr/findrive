@@ -96,7 +96,7 @@ export const fetchStripePricesFromAPI = async () => {
             stripePriceId: price.id,
           };
 
-          console.log(`✅ Found ${planType} plan: ${price.id} (${price.unit_amount / 100}$)`);
+          console.log(`✅ Found ${planType} plan: ${price.id} (₹${price.unit_amount / 100})`);
         }
       }
     }
@@ -133,12 +133,12 @@ const getFallbackPricing = () => {
     },
     [PlanEnum.PRO]: {
       ...PLAN_CONFIG[PlanEnum.PRO],
-      price: 29900, // Fallback: $299/month in cents
+      price: 29900, // Fallback: ₹299/month in cents
       stripePriceId: cleanEnv(process.env.STRIPE_PRICE_ID_PRO),
     },
     [PlanEnum.PREMIUM]: {
       ...PLAN_CONFIG[PlanEnum.PREMIUM],
-      price: 49900, // Fallback: $499/month in cents
+      price: 49900, // Fallback: ₹499/month in cents
       stripePriceId: cleanEnv(process.env.STRIPE_PRICE_ID_PREMIUM),
     },
   };
@@ -533,7 +533,7 @@ export const getAvailablePlansService = async () => {
     return Object.entries(PLAN_PRICING).map(([key, value]) => ({
       id: key,
       name: value.name,
-      monthlyPrice: value.price / 100, // Convert cents to dollars
+      monthlyPrice: value.price / 100, // Convert paise to rupees
       stripePriceId: value.stripePriceId,
       features: value.features,
       transactionLimit: value.transactionLimit,

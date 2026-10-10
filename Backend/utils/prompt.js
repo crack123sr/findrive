@@ -55,9 +55,9 @@ Your job is to give **exactly 3 good short insights** to the user based on their
 Each insight should reflect the actual data and sound like something a smart money coach would say based on the data — short, clear, and practical.
 
 🧾 Report for: ${periodLabel}
-- Total Income: $${totalIncome.toFixed(2)}
-- Total Expenses: $${totalExpenses.toFixed(2)}
-- Available Balance: $${availableBalance.toFixed(2)}
+- Total Income: ${totalIncome}
+- Total Expenses: ${totalExpenses}
+- Available Balance: ${availableBalance}
 - Savings Rate: ${savingsRate}%
 
 Top Expense Categories:
@@ -74,7 +74,7 @@ ${categoryList}
 
 ✅ Example:
 [
-   "Nice! You kept $7,458 after expenses — that’s solid breathing room.",
+   "Nice! You kept ₹7,458 after expenses — that’s solid breathing room.",
    "You spent the most on 'Meals' this period — 32%. Maybe worth keeping an eye on.",
    "You stayed under budget this time. That's a win — keep the momentum"
 ]
